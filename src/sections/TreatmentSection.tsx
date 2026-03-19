@@ -19,7 +19,7 @@ interface TreatmentSectionProps {
 }
 
 // ─── Mobile Card (no GSAP pinning) ────────────────────────────────────────
-function MobileCard({ id, label, headline, description, ctaPrimary, ctaSecondary, image, imagePosition }: TreatmentSectionProps) {
+function MobileCard({ id, label, headline, description, ctaPrimary, ctaSecondary, image }: TreatmentSectionProps) {
   const cardRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
