@@ -39,8 +39,6 @@ function MobileCard({ id, label, headline, description, ctaPrimary, ctaSecondary
     return () => ctx.revert();
   }, []);
 
-  const isImageLeft = imagePosition === 'left';
-
   return (
     <section id={id} ref={cardRef} className="bg-luxury-cream py-14 px-4">
       <div className="max-w-sm mx-auto">
