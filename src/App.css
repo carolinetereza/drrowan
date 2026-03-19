@@ -1,0 +1,96 @@
+/* App-specific styles */
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure pinned sections work correctly */
+.section-pinned {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* GPU acceleration for animated elements */
+.gpu {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F3EE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A46B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b08d5a;
+}
+
+/* Image loading optimization */
+img {
+  content-visibility: auto;
+}
+
+/* Prevent text selection during animations */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Magnetic cursor effect for interactive elements */
+.cursor-magnetic {
+  cursor: none;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #C9A46B;
+  outline-offset: 2px;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .section-pinned {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .gpu {
+    will-change: auto;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .section-pinned {
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 0;
+  }
+  
+  .heading-display {
+    font-size: clamp(32px, 8vw, 44px);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn-luxury-outline {
+    border-width: 2px;
+  }
+  
+  .gold-rule {
+    height: 2px;
+  }
+}
